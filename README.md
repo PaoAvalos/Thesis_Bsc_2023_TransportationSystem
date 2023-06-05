@@ -9,9 +9,9 @@ For a direct copy of the achieved system it is necessary to have:
 
 
 Aside from hardware requirements you should also have:
-ROS Noetic (if used in a new disto, some dependencies may not be available)
-Ubuntu 20.04
-Robotont Demo packages [see this useful guide](https://robotont.github.io/html/files/demo_robot.html)
++ ROS Noetic (if used in a new disto, some dependencies may not be available)
++ Ubuntu 20.04
++ Robotont Demo packages [see this useful guide](https://robotont.github.io/html/files/demo_robot.html)
 
 ### For Robotont
 
@@ -20,13 +20,13 @@ To implement this in your own environment, it is necessary to create a map first
 
   On On-board computer:
   
-  roslaunch robotont_demos 2d_slam.launch
-  roslaunch robotont_demos teleop_keyboard.launch
+  + roslaunch robotont_demos 2d_slam.launch
+  + roslaunch robotont_demos teleop_keyboard.launch
   
   On PC:
-  roslaunch robotont_demos 2d_slam_display.launch
+  + roslaunch robotont_demos 2d_slam_display.launch
   
-  After mapping the entire area save it by running 
+  After mapping the entire area save it by running: 
   `rosrun map_server map_saver -f your_map_name`
 
 * NB! If you are using a DepthCamera, remember to convert to LaserScan [see here](http://wiki.ros.org/depthimage_to_laserscan)
@@ -49,15 +49,15 @@ Simply print them [found here](http://wiki.ros.org/ar_track_alvar) and arrange t
 *On On-board computer
 
 To do so, simply run:
-roslaunch robotont_thesis_pkg launch_sys.launch 
++ roslaunch robotont_thesis_pkg launch_sys.launch 
 
 or, if you want to run both separately:
-roslaunch robotont_thesis_pkg ar_detection.launch
-roslaunch robotont_thesis_pkg main_navigation.launch
++ roslaunch robotont_thesis_pkg ar_detection.launch
++ roslaunch robotont_thesis_pkg main_navigation.launch
 
 *On PC
 
 Visualize the robot's trajectory and plan
-roslaunch robotont_thesis_pkg monitoring.launch 
++ roslaunch robotont_thesis_pkg monitoring.launch 
 
 *NB! Keep in mind you should add the namespace of your robot after .launch if you are running the nodes separetely as well as in the monitoring node.*
