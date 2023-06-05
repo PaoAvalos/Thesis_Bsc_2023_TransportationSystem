@@ -1,0 +1,3 @@
+[submodule "navigation_system_package"]
+	path = navigation_system_package
+	url = https://github.com/PaoAvalos/navigation_system_package.git
